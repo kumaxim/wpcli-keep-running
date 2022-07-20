@@ -4,13 +4,13 @@ on:
   push:
     paths-ignore:
       - 'LICENSE',
-      - 'README.md'
+      - '**.md'
   pull_request:
-    paths-ignore:
-      - 'LICENSE',
-      - 'README.md'
     branches:
       - master
+    paths-ignore:
+      - 'LICENSE',
+      - '**.md'
   workflow_dispatch:
 
 jobs:
