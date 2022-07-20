@@ -1,3 +1,5 @@
+[![Build and Publish Images on Docker Hub](https://github.com/kumaxim/wpcli-keep-running/actions/workflows/.docker-hub.yml/badge.svg)](https://github.com/kumaxim/wpcli-keep-running/actions/workflows/.docker-hub.yml)
+
 # WP CLI: Keep Running Containers
 
 Keep running [WP_CLI](https://wp-cli.org/) in Docker container for continuously operation.
