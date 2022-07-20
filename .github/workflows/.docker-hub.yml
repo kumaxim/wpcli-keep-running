@@ -2,7 +2,13 @@ name: Build and Publish Images on Docker Hub
 
 on:
   push:
+    paths-ignore:
+      - 'LICENSE',
+      - 'README.md'
   pull_request:
+    paths-ignore:
+      - 'LICENSE',
+      - 'README.md'
     branches:
       - master
   workflow_dispatch:
