@@ -48,7 +48,7 @@ Replace values in `CMD` argument in `Dockerfile`(s) by default. That is what thi
 
 ## Tag mapping
 
-Not all tags/labels was added to this image yet. See table bellow.
+Not all tags/labels was added from original image to this yet. See relationships in the table bellow.
 
 | Docker's tag | This image |
 | ------------| :---------: |
