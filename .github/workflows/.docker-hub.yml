@@ -68,6 +68,7 @@ jobs:
       - name: Add namespace
         run: |
           mkdir -p "~/.config/bashbrew/"
+          touch "~/.config/bashbrew/flags"
           echo -e "Namespace: ${{ secrets.DOCKER_HUB_USERNAME }}" > ~/.config/bashbrew/flags
       - uses: docker/login-action@v1
         with:
