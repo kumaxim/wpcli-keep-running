@@ -261,5 +261,5 @@ ENTRYPOINT ["docker-entrypoint.sh"]
 CMD {{ [ if env.variant == "apache" then "apache2-foreground" else "php-fpm" end ] | @json }}
 {{ ) else ( -}}
 USER www-data
-CMD ["wp", "shell"]
+CMD ["tail", "-f", "/dev/null"]
 {{ ) end -}}
