@@ -44,18 +44,18 @@ services:
 ```docker run --rm --name wpcli wordpress:cli tail -f /dev/null```
 
 #### However, [GitHub Actions][github-ci] won't let you override `CMD` for [service containers][github-sc].
-This image was build to get rid from this problem.    
+This image was build to get rid of this problem.    
 
 
 ## Solution
 
-Replace values in `CMD` argument in `Dockerfile`(s) by default. That is what this image do. 
+Replace values in `CMD` argument in `Dockerfile`(s) by default. That is what this image does. 
 
 ## Available tags
 
-All tags from official Docker [WordPress image][docker-wordpress] was preserved. 
+All tags from official Docker [WordPress image][docker-wordpress] were preserved. 
 
-if you're previously defined base images as:
+If you're previously defined base images as:
 ```
 services:
   wpcli:
@@ -69,16 +69,13 @@ services:
     image: kumaxim/wpcli-keep-running:cli-2.6-php7.4
 ```
 
-Full example of using this image in [GitHub Actions][github-ci] Workflow may be find inside `e2e-tests` job in [this pipeline][pcop1-pipeline]. 
+Full example of using this image in [GitHub Actions][github-ci] Workflow may be found inside `e2e-tests` job in [this pipeline][pcop1-pipeline]. 
 
 ## Copyright
 
 [Maxim Kudryavtsev](https://k-maxim.ru/). 2022. All rights reserved.
 
 The code in this repository distribute under General Public License version 2 or any later.
-
-
-Issues: [Github](https://github.com/kumaxim/wpcli-keep-running/issues)
 
 [wordpress-image]: https://hub.docker.com/_/wordpress
 [github-ci]: https://github.com/features/actions
