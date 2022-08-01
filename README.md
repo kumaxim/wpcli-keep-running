@@ -1,8 +1,8 @@
 [![Build & Push](https://github.com/kumaxim/wpcli-keep-running/actions/workflows/build-for-docker-hub.yml/badge.svg)](https://github.com/kumaxim/wpcli-keep-running/actions/workflows/build-for-docker-hub.yml)
 
-# WP CLI: Keep Running Containers
+# WP-CLI: Keep Running Containers
 
-Keep running [WP_CLI](https://wp-cli.org/) in Docker container for continuously operation. 
+Keep running [WP-CLI](https://wp-cli.org/) in Docker container for continuously operation. 
 
 Fork of official Docker [WordPress image][docker-wordpress] by the Docker Community. 
 
