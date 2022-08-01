@@ -1,4 +1,4 @@
-[![Build and Publish Images on Docker Hub](https://github.com/kumaxim/wpcli-keep-running/actions/workflows/.docker-hub.yml/badge.svg)](https://github.com/kumaxim/wpcli-keep-running/actions/workflows/.docker-hub.yml)
+[![Build & Push](https://github.com/kumaxim/wpcli-keep-running/actions/workflows/build-for-docker-hub.yml/badge.svg)](https://github.com/kumaxim/wpcli-keep-running/actions/workflows/build-for-docker-hub.yml)
 
 # WP CLI: Keep Running Containers
 
