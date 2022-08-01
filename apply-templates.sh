@@ -55,8 +55,6 @@ for version; do
 
 			if [ "$version" = 'cli' ]; then
 				cp -a cli-entrypoint.sh "$dir/docker-entrypoint.sh"
-			else
-				cp -a docker-entrypoint.sh wp-config-docker.php "$dir/"
 			fi
 		done
 	done
