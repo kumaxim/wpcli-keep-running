@@ -2,7 +2,9 @@
 
 # WP CLI: Keep Running Containers
 
-Keep running [WP_CLI](https://wp-cli.org/) in Docker container for continuously operation.
+Keep running [WP_CLI](https://wp-cli.org/) in Docker container for continuously operation. 
+
+Fork of official Docker [WordPress image][docker-wordpress] by the Docker Community. 
 
 ## Quick Start
 
@@ -41,41 +43,45 @@ services:
 
 ```docker run --rm --name wpcli wordpress:cli tail -f /dev/null```
 
+#### However, [GitHub Actions][github-ci] won't let you override `CMD` for [service containers][github-sc].
+This image was build to get rid from this problem.    
+
 
 ## Solution
 
 Replace values in `CMD` argument in `Dockerfile`(s) by default. That is what this image do. 
 
-## Tag mapping
+## Available tags
 
-Not all tags/labels was added from original image to this yet. See relationships in the table bellow.
+All tags from official Docker [WordPress image][docker-wordpress] was preserved. 
 
-| Docker's tag | This image |
-| ------------| :---------: |
-| cli-2.6.0        | cli-2.6-php7.4 |
-| cli-2.6          | cli-2.6-php7.4 |
-| cli-2            | cli-2.6-php7.4 |
-| cli              | cli-2.6-php7.4 |
-| cli-2.6.0-php7.4 | cli-2.6-php7.4 |
-| cli-2.6-php7.4   | cli-2.6-php7.4 |
-| cli-2-php7.4     | cli-2.6-php7.4 |
-| cli-php7.4       | cli-2.6-php7.4 |
-| cli-2.6.0-php8.0 | cli-2.6-php8.0 |
-| cli-2.6-php8.0   | cli-2.6-php8.0 |
-| cli-2-php8.0     | cli-2.6-php8.0 |
-| cli-php8.0       | cli-2.6-php8.0 |
-| cli-2.6.0-php8.1 | cli-2.6-php8.1 | 
-| cli-2.6-php8.1   | cli-2.6-php8.1 |
-| cli-2-php8.1     | cli-2.6-php8.1 |
-| cli-php8.1       | cli-2.6-php8.1 |
+if you're previously defined base images as:
+```
+services:
+  wpcli:
+    image: wordpress:cli-2.6-php7.4
+```
 
+...you just need to replace the name:
+```
+services:
+  wpcli:
+    image: kumaxim/wpcli-keep-running:cli-2.6-php7.4
+```
 
-## Credits
+Full example of using this image in [GitHub Actions][github-ci] Workflow may be find inside `e2e-tests` job in [this pipeline][pcop1-pipeline]. 
 
-Based on Docker's [Official WordPress Images](https://hub.docker.com/_/wordpress)
+## Copyright
 
-## Others
+[Maxim Kudryavtsev](https://k-maxim.ru/). 2022. All rights reserved.
 
-Maintainer: [Maxim Kudryavtsev](https://k-maxim.ru/)
+The code in this repository distribute under General Public License version 2 or any later.
+
 
 Issues: [Github](https://github.com/kumaxim/wpcli-keep-running/issues)
+
+[wordpress-image]: https://hub.docker.com/_/wordpress
+[github-ci]: https://github.com/features/actions
+[github-sc]: https://docs.github.com/en/actions/using-containerized-services/about-service-containers
+[docker-wordpress]: https://github.com/docker-library/wordpress
+[pcop1-pipeline]: https://github.com/kumaxim/pull-comnents-other-pages/blob/master/.github/workflows/build-plugin-release.yml
