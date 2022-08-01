@@ -58,7 +58,7 @@ getArches 'wordpress'
 cat <<-EOH
 # this file is generated via https://github.com/docker-library/wordpress/blob/$(fileCommit "$self")/$self
 
-Maintainers: Maxim Kudryavtsev <kumaxim@users.noreply.github.com> (@kumaxim),
+Maintainers: Maxim Kudryavtsev <kumaxim@users.noreply.github.com> (@kumaxim)
 GitRepo: https://github.com/kumaxim/pull-comnents-other-pages
 EOH
 
